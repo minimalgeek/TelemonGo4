@@ -6,10 +6,10 @@ namespace UnityStandardAssets.Utility
 {
     public class DragRigidbody : MonoBehaviour
     {
-        const float k_Spring = 100.0f;
-        const float k_Damper = 10.0f;
-        const float k_Drag = 10.0f;
-        const float k_AngularDrag = 5.0f;
+        const float k_Spring = 200.0f;
+        const float k_Damper = 0.5f;
+        const float k_Drag = 20.0f;
+        const float k_AngularDrag = 100.0f;
         const float k_Distance = .0f;
         const bool k_AttachToCenterOfMass = true;
 
