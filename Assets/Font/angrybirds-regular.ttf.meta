@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f06e33c844b9acb45838c7e2917902d0
+timeCreated: 1485116396
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AngryBirds
+  fontNames:
+  - AngryBirds
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
