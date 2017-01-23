@@ -8,6 +8,7 @@ public class Discount
 {
     public GameObject item;
     public int discountPercentage;
+    public Image imageToDisplay;
 }
 public class DiscountManager : Singleton<DiscountManager>
 {
@@ -17,6 +18,7 @@ public class DiscountManager : Singleton<DiscountManager>
 
     public GameObject congratulationsPanel;
     public Text congratulationsMessage;
+    public Text badgeText;
 
 	public ParticleSystem winParticle;
 
@@ -28,17 +30,23 @@ public class DiscountManager : Singleton<DiscountManager>
         if (found != null)
         {
             Destroy(item);
+            found.imageToDisplay.enabled = true;
             congratulationsMessage.text = WIN_TEXT_LEFT + found.discountPercentage + WIN_TEXT_RIGHT;
             StartCoroutine(PlayPS());
         }
     }
 
+    int counter = 0;
     private IEnumerator PlayPS() {
+        counter++;
         winParticle.Play();
         congratulationsPanel.SetActive(true);
         yield return new WaitForSeconds(5f);
         congratulationsPanel.SetActive(false);
-        
+        if (counter == 2) {
+            winParticle.Play();
+            badgeText.gameObject.SetActive(true);
+        }
     }
 
 }
